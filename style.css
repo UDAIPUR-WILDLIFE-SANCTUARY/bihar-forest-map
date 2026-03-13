@@ -1,0 +1,126 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: url("assets/bg1.jpg") no-repeat center center fixed;
+  background-size: cover;
+  font-family: Arial, sans-serif;
+  color: #fff;
+  width: 100vw;
+  height: 100vh;
+}
+
+.map-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 80px 2vh 2vh; /* 👈 Top padding moves the map down */
+  backdrop-filter: blur(4px);
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+
+
+#biharMap {
+  width: 100%;
+  height: auto;
+  max-width: 95vw;
+  max-height: 95vh;
+  display: block;
+  object-fit: contain;
+}
+#biharMap text {
+  fill: yellow;
+  font-size: 56px;
+  font-family: Arial, sans-serif;
+  pointer-events: none; /* Prevent accidental clicks */
+}
+
+
+#biharMap path {
+  transition: transform 0.3s ease, fill 0.3s ease;
+  cursor: pointer;
+  filter: drop-shadow(2px 2px 2px #1a1a1a) drop-shadow(-1px -1px 1px #2ecc71);
+  fill: #006400; /* Bottle Green */
+
+}
+
+#biharMap path:hover {
+  transform: scale(1.08);
+  fill: #4caf50;
+  filter: drop-shadow(0 0 6px #66ff99);
+}
+
+#biharMap path.active {
+  fill: #81c784;
+  stroke: #ffffff;
+  stroke-width: 2;
+}
+.map-wrapper {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 95vw;
+  max-height: 85vh;
+  margin-top: 180px; /* 👈 this will push the map down */
+}
+
+
+.pin {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: #ff4081; /* beautiful pink */
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 0 0 8px #fff;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  z-index: 10;
+  animation: pulse 1.5s infinite;
+}
+
+/* Optional animation */
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(255, 64, 129, 0.7); }
+  70% { box-shadow: 0 0 0 15px rgba(255, 64, 129, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(255, 64, 129, 0); }
+}
+/* Fullscreen layout container */
+.container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+/* Left vertical heading */
+/* Horizontal heading bar on top */
+.horizontal-heading {
+  width: 100%;
+  padding: 12px 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-bottom: 2px solid #4caf50;
+  text-align: center;
+  z-index: 20;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+
+/* Logo bottom-right */
+.logo {
+  position: absolute;
+  bottom: 20px; /* 👈 was top: 20px; now bottom */
+  right: 20px;
+  height: 260px;
+  width: auto;
+  z-index: 10;
+}
