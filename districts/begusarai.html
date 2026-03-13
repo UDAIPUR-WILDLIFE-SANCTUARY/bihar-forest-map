@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vaishali| Ecological Sites</title>
+  <style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  :root {
+    --primary: #2e8b57;
+    --highlight: #aaffcc;
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --shadow-color: rgba(0, 255, 150, 0.3);
+  }
+
+  html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Segoe UI', sans-serif;
+
+  background: 
+    linear-gradient(120deg, rgba(0, 61, 46, 0.3), rgba(0, 31, 31, 0.5)),
+    url("http://localhost/map_new/assets/images/bg1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+  .container {
+    width: 95vw;
+    height: 95vh;
+    background-color: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(0,255,150,0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .back-button {
+    background: var(--primary);
+    color: white;
+    padding: 10px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 0 10px var(--shadow-color);
+    position: absolute;
+    bottom: 20px;
+    transition: all 0.3s ease;
+  }
+
+  .back-button.left {
+    left: 20px;
+  }
+
+  .back-button.right {
+    right: 20px;
+  }
+
+  .back-button:hover {
+    background-color: #249c6c;
+    box-shadow: 0 0 15px var(--shadow-color);
+  }
+
+  h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 5px;
+    text-shadow: 0 0 5px rgba(0,255,150,0.2);
+  }
+
+  .district-info {
+    text-align: center;
+    font-size: 1rem;
+    color: var(--highlight);
+    margin-bottom: 20px;
+  }
+
+  .venues-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    margin-top: 20px;
+  }
+
+  .venue {
+    width: 280px;
+    height: 420px;
+    background-color: var(--glass-bg);
+    backdrop-filter: blur(5px);
+    border-left: 4px solid var(--primary);
+    border-radius: 12px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,255,150,0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .venue:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 15px rgba(0,255,150,0.3);
+  }
+
+  .venue img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 10px 0;
+  }
+
+  .venue-link {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .venue-link:hover .venue {
+    transform: scale(1.03);
+    box-shadow: 0 0 15px var(--shadow-color);
+  }
+
+  @media (max-width: 768px) {
+    .venue {
+      width: 90%;
+    }
+
+    .back-button {
+      font-size: 0.9rem;
+      padding: 8px 12px;
+    }
+  }
+</style>
+
+</head>
+<body>
+</head>
+<body>
+  
+
+  <div class="container">
+    <h1>Begusarai| Ecological Sites</h1>
+    <p class="district-info">
+      Begusarai district in Bihar holds significant ecological importance, primarily due to the Kanwar Lake Bird Sanctuary, also known as Kabartal Wetland. Recognized as Bihar's first Ramsar site in 2020, this sanctuary is Asia's largest freshwater oxbow lake, formed by the meandering of the Burhi Gandak River.
+    </p>
+
+    <!-- Repeat this block for each venue -->
+  
+  <div class="venues-grid">
+  <a href="../venues/kanwar.html" class="venue-link">
+    <div class="venue">
+      <h2>| Kanwar Lake Sanctuary  |</h2>
+	  
+	  <br>
+	  
+      <p>Kanwar Lake Bird Sanctuary in Begusarai, Bihar, is Asia's largest freshwater oxbow lake, hosting over 220 bird species, including migratory waterbirds, and serving as a crucial wetland ecosystem.</p>
+      <img src="http://localhost/map_new/assets/images/kanwar3.jpg" alt="Eco Park" />
+    </div>
+  </a>
+
+
+  <!-- Add more .venue blocks here if needed -->
+</div>
+
+
+    <!-- <div class="venue">
+      <h2>Venue Name 2</h2>
+      <p>
+        This venue serves as a recreational and educational space focused on
+        sustainable conservation. Guided tours and eco trails are popular here.
+      </p>
+      <img src="../assets/images/sample2.jpg" alt="Venue Name 2" />
+      <a href="../assets/venues/venue2.html">More about Venue 2</a>
+    </div>
+
+    <!-- Uncomment and use only if a district has 3 venues -->
+    <!--
+    <div class="venue">
+      <h2>Venue Name 3</h2>
+      <p>
+        A significant part of Bihar's green zone, this area hosts indigenous
+        flora and fauna and is a critical region for environmental research.
+      </p>
+      <img src="../assets/images/sample3.jpg" alt="Venue Name 3" />
+      <a href="../assets/venues/venue3.html">More about Venue 3</a>
+    </div>
+    -->
+
+    <!-- Show this block if there are no venues -->
+    <!--
+    <div class="no-venue">
+      No ecological venues are currently listed for this district.
+    </div>
+    -->
+	<a href="http://localhost/map_new" class="back-button left">← Back to Map</a>
+    <a href="http://localhost/map_new" class="back-button right">Back to Map →</a>
+
+  </div>
+</body>
+</html>
