@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gaya | Ecological Sites</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #003d2e, #001f1f);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .container {
+      width: 95vw;
+      height: 95vh;
+      background-color: rgba(255, 255, 255, 0.05);
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0,255,150,0.2);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      overflow: hidden;
+    }
+	.back-button {
+  background: #2e8b57;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(0,255,150,0.3);
+  position: absolute;
+  bottom: 20px;
+}
+.back-button.left {
+  left: 20px;
+}
+.back-button.right {
+  right: 20px;
+}
+.back-button:hover {
+  background-color: #249c6c;
+}
+
+.back-button:hover {
+  background-color: #249c6c;
+}
+
+    h1 {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 5px;
+    }
+    .district-info {
+      text-align: center;
+      font-size: 1rem;
+      color: #aaffcc;
+      margin-bottom: 20px;
+    }
+    .venues-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  margin-top: 20px;
+}
+
+.venue {
+  width: 280px;
+  height: 420px; /* ✅ Fixes card height */
+  background-color: rgba(255,255,255,0.05);
+  border-left: 4px solid #2e8b57;
+  border-radius: 12px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,255,150,0.1);
+  transition: transform 0.2s ease;
+}
+
+.venue:hover {
+  transform: scale(1.03);
+}
+.venue img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+.venue-link {
+  text-decoration: none;
+  color: inherit;
+}
+.venue-link:hover .venue {
+  transform: scale(1.03);
+  box-shadow: 0 0 15px rgba(0,255,150,0.3);
+}
+
+
+
+  </style>
+</head>
+<body>
+  
+
+  <div class="container">
+    <h1>Gaya</h1>
+    <p class="district-info">
+      Gaya’s eco-tourism combines spiritual heritage with nature and wildlife exploration.
+	  Sites like Gautam Buddha Wildlife Sanctuary promote conservation and environmental awareness.
+	  With rich forests, scenic hills, and diverse fauna, Gaya offers a peaceful yet educational escape. 
+    </p>
+
+    <!-- Repeat this block for each venue -->
+  
+  <div class="venues-grid">
+  <a href="../venues/gautambudhawildlife.html" class="venue-link">
+    <div class="venue">
+      <h2>| Gautam Buddha Wildlife Sanctuary |</h2>
+	  <br>
+	  </br>
+	  <br>
+      <p>Gautam Buddha Wildlife Sanctuary, spanning Gaya (Bihar) and Koderma (Jharkhand), was established in 1976. 
+	  Once a British-era hunting reserve, it now protects 259 km² of rich biodiversity and forest.</p>
+      <img src="http://localhost/mapp/assets/images/gbws1.jpg" alt="Eco Park" />
+    </div>
+  </a>
+
+
+  <!-- Add more .venue blocks here if needed -->
+</div>
+
+
+    <!-- <div class="venue">
+      <h2>Venue Name 2</h2>
+      <p>
+        This venue serves as a recreational and educational space focused on
+        sustainable conservation. Guided tours and eco trails are popular here.
+      </p>
+      <img src="../assets/images/sample2.jpg" alt="Venue Name 2" />
+      <a href="../assets/venues/venue2.html">More about Venue 2</a>
+    </div>
+
+    <!-- Uncomment and use only if a district has 3 venues -->
+    <!--
+    <div class="venue">
+      <h2>Venue Name 3</h2>
+      <p>
+        A significant part of Bihar's green zone, this area hosts indigenous
+        flora and fauna and is a critical region for environmental research.
+      </p>
+      <img src="../assets/images/sample3.jpg" alt="Venue Name 3" />
+      <a href="../assets/venues/venue3.html">More about Venue 3</a>
+    </div>
+    -->
+
+    <!-- Show this block if there are no venues -->
+    <!--
+    <div class="no-venue">
+      No ecological venues are currently listed for this district.
+    </div>
+    -->
+	<a href="../../index.html#skipwelcome" class="back-button left">← Back to Map</a>
+    <a href="../../index.html#skipwelcome" class="back-button right">Back to Map →</a>
+
+  </div>
+</body>
+</html>

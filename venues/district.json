@@ -1,0 +1,27 @@
+{
+  "WestChamparan": {
+    "district": "West Champaran",
+    "venues": [
+      {
+        "name": "Valmiki Tiger Reserve",
+        "image": "valmiki.jpg",
+        "link": "valmiki.html"
+      },
+      {
+        "name": "Bheriyari Ecopark",
+        "image": "bheriyari.jpg",
+        "link": "bheriyari.html"
+      }
+    ]
+  },
+  "Udaypur": {
+    "district": "Udaypur",
+    "venues": [
+      {
+        "name": "Udaypur Forest Retreat",
+        "image": "udaypur.jpg",
+        "link": "udaypur.html"
+      }
+    ]
+  }
+}
